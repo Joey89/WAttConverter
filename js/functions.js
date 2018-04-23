@@ -6,19 +6,15 @@ $( document ).ready( function()
 
   $( '#from_watt, #to_watt, #time' ).change( function()
   {
-
     calculate();
   });
 
   calculate();
-
   function calculate()
   {
-	$.post( './calculate.php', $( '#form-convert' ).serialize(), function( data )
-	{
-		$( '#result_value' ).html( data );
-	});
-	
+	   $.post( './calculate.php', $( '#form-convert' ).serialize(), function( data )
+	   {
+	   	$( '#result_value' ).html( data );
+	   });
   }
-
 });
