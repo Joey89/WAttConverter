@@ -200,7 +200,7 @@
                            $singleSec = 0;
                          }
                        }
-                       return $min + ':' + $tensSec + $singleSec;
+                       return $min + ':' + Number($tensSec).toFixed(0) + Number($singleSec).toFixed(0);
                     }
 
 
